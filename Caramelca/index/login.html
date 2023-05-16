@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+  <link rel="stylesheet" href="./l_r.css">
+<head>
+  <title>Spring Security Example</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 class="go">Вход</h1>
+<!--<div th:if="${param.error}">
+  Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+  You have been logged out.
+</div>-->
+<div class="login">
+  <form action="@{/login}" method="post">
+    <div><label> Логин: <input type="text" name="username"/> </label></div>
+    <div class="pass"><label> Пароль: <input type="password" name="password"/> </label></div>
+    <a href="./registration.html" class="less">Забыли пароль?</a>
+    <div><button type="submit"  class="button-16" role="button">Войти</button></div>
+  </form>
+</div>
+<div><button type="submit"  class="button-16" role="button" href="./registration.html">Зарегистрироваться</button></div>
+<div><button type="submit"  class="button-16" role="button" href="./index.html">Продолжить</button></div>
+</body>
+</html>

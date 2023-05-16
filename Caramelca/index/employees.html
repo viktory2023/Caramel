@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<nav class="admin">
+    <header class="header">
+        <nav class="menu1">
+            <ul class="menu_list1">
+                <li class="menu__item"><a href="./service.html" class="menu__link1">Записи</a></li>
+                <li class="menu__item"><a href="./employees.html" class="menu__link1">Сотрудники</a></li>
+                <li class="menu__item"><a href="./profession.css" class="menu__link1">Профессии</a></li>
+                <li class="menu__item"><a href="./user.html" class="menu__link1">Клиенты</a></li>
+                <li class="menu__item"><a href="./calendar.html" class="menu__link1">Календарь</a></li>
+        </nav>
+    </header>
+    <!--<ol>
+        <li><a th:href="@{/appointment}">Записи</a></li>
+        <li><a th:href="@{/employees}">Сотрудники</a></li>
+        <li><a th:href="@{/profession}">Профессии</a></li>
+        <li><a th:href="@{/user}">Клиенты</a></li>
+        <li><a th:href="@{/calendar}">Календарь</a></li>
+    </ol>-->
+</nav>
+<div class="t1">
+    <form th:action="@{/logout}">
+        <button type="submit"  class="button-1" role="button">Выход</button>
+    </form>
+    <h1 class="t2">Список сотрудников</h1>
+    <div class="table1">
+        <div class="table_txt">
+            <h4 class="t_1">Имя</h4>
+            <h4 class="t_2">Фамилия</h4>
+            <h4 class="t_3">Отчество</h4>
+            <h4 class="t_4">Номер телефона</h4>
+        </div>
+        <div class="table_11">
+            <div class="ti">
+                <form action="@{/employees/add}" method="post">
+                    <input type="text" name="name" placeholder="Введите имя" required>
+                    <input type="text" name="surname" placeholder="Введите фамилию" required>
+                    <input type="text" name="patronymic" placeholder="Введите отчество" required>
+                    <input type="text" name="number" placeholder="Введите номер телефона" required>
+                    <button type="submit"  class="button-6" role="button">Добавить сотрудника</button>
+                </form>
+                <!--<h4 class="t_11">Введите имя</h4>
+                <h4 class="t_12">Введите фамилию</h4>
+                <h4 class="t_13">Введите отчество</h4>
+                <h4 class="t_14">Введите номер телефона</h4>
+                <button class="button-6" role="button">Добавить сотрудника</button>
+                <table class="button">
+                    <button type="submit">Добавить сотрудника</button>
+                </table>-->
+            </div>
+            <!--<line2 class="line">
+                <h4 class="t_11">Введите имя</h4>
+                <h4 class="t_12">Введите фамилию</h4>
+                <h4 class="t_13">Введите отчество</h4>
+                <h4 class="t_14">Введите номер телефона</h4>
+                <button class="button-6" role="button">Добавить сотрудника</button>
+            </line2>-->
+            <div class="ta">
+                <form action="@{/employees/filter}" method="get">
+                    <input type="text" name="name" placeholder="Имя">
+                    <input type="text" name="surname" placeholder="Фамилия">
+                    <input type="text" name="number" placeholder="Номер телефона">
+                    <button type="submit" class="button-6" role="button">Поиск</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="t">
+        <table class="ta">
+            <thead class="th">
+                <tr class="tr">
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Отчество</th>
+                    <th>Номер телефона</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee : ${employees}">
+                    <td th:text="${employee.name}"></td>
+                    <td th:text="${employee.surname}"></td>
+                    <td th:text="${employee.patronymic}"></td>
+                    <td th:text="${employee.number}"></td>
+                    <td>
+                        <button type="submit" class="button-6" role="button">Редактировать</button>
+                        <!--<a th:href="'/employees/' + ${employee.id}">Редактировать</a>-->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
