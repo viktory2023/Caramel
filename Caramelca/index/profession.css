@@ -27,7 +27,7 @@ body {
     margin-right: 50px;
 }
 
-.menu__link {
+.menu__link1 {
     font-size: 14px;
     color: #ffffff;
     text-decoration: none;
@@ -55,6 +55,11 @@ body {
 .pro2{
     margin-left:29%;
     margin-top: 25px;
+}
+
+.pro3{
+    margin-left:29%;
+    font-weight:400;
 }
 
 .button-6 {

@@ -13,52 +13,14 @@ body {
     margin-bottom: 150px;
 }
 
-.menu1 {
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    top: 65px;
-    left: 29%;
-    color: #000000;
-}
-
-.menu__item {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 50px;
-}
-
-.menu__link {
-    font-size: 14px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.menu__link1 {
-    font-size: 14px;
-    color: #000000;
-    text-decoration: none;
-}
-
-.menu__item:hover {
-    color: #cb9c85;
-}
-
-.time {
+.edit {
     margin-left:39%;
     margin-top: 50px;
     margin-bottom: 50px;
     font-weight:400;
 }
 
-.time1{
-    margin-left:29%;
-}
-
-.time2{
-    margin-left:29%;
-}
-
-.time3{
+.edit1 {
     margin-left:29%;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -112,3 +74,10 @@ body {
     transform: translateY(0);
   }
   
+  .gr1{
+    margin-left:39%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-weight:400;
+    font-size: 20px;
+  }

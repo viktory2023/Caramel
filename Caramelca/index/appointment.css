@@ -43,23 +43,13 @@ body {
     color: #cb9c85;
 }
 
-.time {
+.appo{
+    margin-left:29%;
+    margin-bottom: 25px;
+}
+
+.appo1{
     margin-left:39%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-weight:400;
-}
-
-.time1{
-    margin-left:29%;
-}
-
-.time2{
-    margin-left:29%;
-}
-
-.time3{
-    margin-left:29%;
     margin-top: 50px;
     margin-bottom: 50px;
     font-weight:400;

@@ -31,29 +31,31 @@
     <button type="submit"  class="button-6" role="button">Поиск</button>
   </form>
 </div>
-<table>
-  <thead>
-  <tr>
-    <th>Сотрудник</th>
-    <th>Дата</th>
-    <th>Время</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr th:each="calendar : ${calendars}">
-    <td th:text="${calendar.employee.name} + ' ' + ${calendar.employee.surname}"></td>
-    <td th:text="${calendar.date}"></td>
-    <td th:text="${calendar.time}"></td>
-    <td>
-      <form th:action="@{/service/{id}/appointment(id = ${id.id})}" method="post">
-        <input type="hidden" name="employer" th:value="${calendar.employee.id}" />
-        <input type="hidden" name="date" th:value="${calendar.date}" />
-        <input type="hidden" name="time" th:value="${calendar.time}" />
-        <button type="submit"  class="button-6" role="button">Записаться</button>
-      </form>
-    </td>
-  </tr>
-  </tbody>
-</table>
+<div class="pro3">
+  <table>
+    <thead>
+    <tr>
+      <th>Сотрудник</th>
+      <th>Дата</th>
+      <th>Время</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="calendar : ${calendars}">
+      <td th:text="${calendar.employee.name} + ' ' + ${calendar.employee.surname}"></td>
+      <td th:text="${calendar.date}"></td>
+      <td th:text="${calendar.time}"></td>
+      <td>
+        <form th:action="@{/service/{id}/appointment(id = ${id.id})}" method="post">
+          <input type="hidden" name="employer" th:value="${calendar.employee.id}" />
+          <input type="hidden" name="date" th:value="${calendar.date}" />
+          <input type="hidden" name="time" th:value="${calendar.time}" />
+          <button type="submit"  class="button-6" role="button">Записаться</button>
+        </form>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 </body>
 </html>

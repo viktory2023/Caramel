@@ -12,7 +12,7 @@
             <ul class="menu_list1">
                 <li class="menu__item"><a href="./service.html" class="menu__link1">Записи</a></li>
                 <li class="menu__item"><a href="./employees.html" class="menu__link1">Сотрудники</a></li>
-                <li class="menu__item"><a href="./profession.css" class="menu__link1">Профессии</a></li>
+                <li class="menu__item"><a href="./profession.html" class="menu__link1">Профессии</a></li>
                 <li class="menu__item"><a href="./user.html" class="menu__link1">Клиенты</a></li>
                 <li class="menu__item"><a href="./calendar.html" class="menu__link1">Календарь</a></li>
         </nav>
@@ -27,16 +27,16 @@
 </nav>
 <div class="t1">
     <form th:action="@{/logout}">
-        <button type="submit"  class="button-1" role="button">Выход</button>
+        <button type="submit"  class="button-1" role="button" href="./index.html">Выход</button>
     </form>
     <h1 class="t2">Список сотрудников</h1>
     <div class="table1">
-        <div class="table_txt">
+        <!--<div class="table_txt">
             <h4 class="t_1">Имя</h4>
             <h4 class="t_2">Фамилия</h4>
             <h4 class="t_3">Отчество</h4>
             <h4 class="t_4">Номер телефона</h4>
-        </div>
+        </div>-->
         <div class="table_11">
             <div class="ti">
                 <form action="@{/employees/add}" method="post">

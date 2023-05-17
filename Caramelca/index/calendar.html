@@ -61,27 +61,28 @@
             <button type="submit"  class="button-6" role="button">Поиск</button>
         </form>
     </div>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Сотрудник</th>
-                <th>Дата</th>
-                <th>Время</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="calendar : ${calendar}">
-                <td th:text="${calendar.employee.name} + ' ' + ${calendar.employee.surname}"></td>
-                <td th:text="${calendar.date}"></td>
-                <td th:text="${calendar.time}"></td>
-                <td>
-                    <form th:action="@{/calendar/delete/{id}(id=${calendar.id})}" method="post">
-                        <button type="submit"  class="button-6" role="button">Удалить</button>
-                    </form>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="time3">
+        <table>
+            <thead>
+                <tr>
+                    <th>Сотрудник</th>
+                    <th>Дата</th>
+                    <th>Время</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="calendar : ${calendar}">
+                    <td th:text="${calendar.employee.name} + ' ' + ${calendar.employee.surname}"></td>
+                    <td th:text="${calendar.date}"></td>
+                    <td th:text="${calendar.time}"></td>
+                    <td>
+                        <form th:action="@{/calendar/delete/{id}(id=${calendar.id})}" method="post">
+                            <button type="submit"  class="button-6" role="button">Удалить</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
